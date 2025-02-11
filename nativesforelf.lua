@@ -4149,7 +4149,7 @@ BOOL Message(const char* text)
      
        return END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED();
    }]=]
-	BEGIN_TEXT_COMMAND_IS_MESSAGE_DISPLAYED=function(text--[[@param text string]])return InvokeVoid(0x853648FD1063A213,text)end; 		ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(text);
+	BEGIN_TEXT_COMMAND_IS_MESSAGE_DISPLAYED=function(text--[[@param text string]])return InvokeVoid(0x853648FD1063A213,text)end; 
 	END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED=function()return InvokeBool(0x8A9BA1AB3E237613)end;---@return boolean
 	--[=[The following were found in the decompiled script files:
 STRING, TWOSTRINGS, NUMBER, PERCENTAGE, FO_TWO_NUM, ESMINDOLLA, ESDOLLA, MTPHPER_XPNO, AHD_DIST, CMOD_STAT_0, CMOD_STAT_1, CMOD_STAT_2, CMOD_STAT_3, DFLT_MNU_OPT, F3A_TRAFDEST, ES_HELP_SOC3
