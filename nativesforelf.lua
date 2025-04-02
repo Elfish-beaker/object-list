@@ -17133,20 +17133,19 @@ Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Positio
 }
 
 
-NIGGER =  {
-	
-SET_TEXT_SCALE=function(scale--[[@param scale number]],size--[[@param size number]])return InvokeVoid(0x07C837F9A01C34C9,scale+.0,size+.0)end;
-SET_TEXT_COLOUR=function(red--[[@param red integer]],green--[[@param green integer]],blue--[[@param blue integer]],alpha--[[@param alpha integer]])return InvokeVoid(0xBE6B23FFA53FB442,red,green,blue,alpha)end;
-SET_TEXT_CENTRE=function(align--[[@param align boolean]])return InvokeVoid(0xC02F4DBFB51D988B,align)end;
-SET_TEXT_FONT=function(fontType--[[@param fontType integer]])return InvokeVoid(0x66E0276CC5F6B9DA,fontType)end;
-SET_TEXT_DROPSHADOW=function(distance--[[@param distance integer]],r--[[@param r integer]],g--[[@param g integer]],b--[[@param b integer]],a--[[@param a integer]])return InvokeVoid(0x465C84BC39F1C351,distance,r,g,b,a)end;
-SET_TEXT_EDGE=function(p0--[[@param p0 integer]],r--[[@param r integer]],g--[[@param g integer]],b--[[@param b integer]],a--[[@param a integer]])return InvokeVoid(0x441603240D202FA6,p0,r,g,b,a)end;
-SET_TEXT_PROPORTIONAL=function(p0--[[@param p0 boolean]])return InvokeVoid(0x038C1F517D7FDCF8,p0)end;
-SET_TEXT_WRAP=function(start--[[@param start number]],end_--[[@param end_ number]])return InvokeVoid(0x63145D9C883A1A70,start+.0,end_+.0)end;
-SET_TEXT_OUTLINE=function()return InvokeVoid(0x2513DFB0FB8400FE)end;
-BEGIN_TEXT_COMMAND_DISPLAY_TEXT=function(text--[[@param text string]])return InvokeVoid(0x25FBB336DF1804CB,text)end;
-ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME=function(text--[[@param text string]])return InvokeVoid(0x6C188BE134E074AA,text)end;
-END_TEXT_COMMAND_DISPLAY_TEXT=function(x--[[@param x number]],y--[[@param y number]],p2--[[@param p2 integer]])return InvokeVoid(0xCD015E5BB0D96A57,x+.0,y+.0,p2)end;
-MP_TEXT_CHAT_DISABLE=function(toggle--[[@param toggle boolean]])return InvokeVoid(0x1DB21A44B09E8BA3,toggle)end;
-
+NIGGER = 
+	{
+	SET_TEXT_SCALE=function(scale--[[@param scale number]],size--[[@param size number]])return InvokeVoid(0x07C837F9A01C34C9,scale+.0,size+.0)end;
+	SET_TEXT_COLOUR=function(red--[[@param red integer]],green--[[@param green integer]],blue--[[@param blue integer]],alpha--[[@param alpha integer]])return InvokeVoid(0xBE6B23FFA53FB442,red,green,blue,alpha)end;
+	SET_TEXT_CENTRE=function(align--[[@param align boolean]])return InvokeVoid(0xC02F4DBFB51D988B,align)end;
+	SET_TEXT_FONT=function(fontType--[[@param fontType integer]])return InvokeVoid(0x66E0276CC5F6B9DA,fontType)end;
+	SET_TEXT_DROPSHADOW=function(distance--[[@param distance integer]],r--[[@param r integer]],g--[[@param g integer]],b--[[@param b integer]],a--[[@param a integer]])return InvokeVoid(0x465C84BC39F1C351,distance,r,g,b,a)end;
+	SET_TEXT_EDGE=function(p0--[[@param p0 integer]],r--[[@param r integer]],g--[[@param g integer]],b--[[@param b integer]],a--[[@param a integer]])return InvokeVoid(0x441603240D202FA6,p0,r,g,b,a)end;
+	SET_TEXT_PROPORTIONAL=function(p0--[[@param p0 boolean]])return InvokeVoid(0x038C1F517D7FDCF8,p0)end;
+	SET_TEXT_WRAP=function(start--[[@param start number]],end_--[[@param end_ number]])return InvokeVoid(0x63145D9C883A1A70,start+.0,end_+.0)end;
+	SET_TEXT_OUTLINE=function()return InvokeVoid(0x2513DFB0FB8400FE)end;
+	BEGIN_TEXT_COMMAND_DISPLAY_TEXT=function(text--[[@param text string]])return InvokeVoid(0x25FBB336DF1804CB,text)end;
+	ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME=function(text--[[@param text string]])return InvokeVoid(0x6C188BE134E074AA,text)end;
+	END_TEXT_COMMAND_DISPLAY_TEXT=function(x--[[@param x number]],y--[[@param y number]],p2--[[@param p2 integer]])return InvokeVoid(0xCD015E5BB0D96A57,x+.0,y+.0,p2)end;
+	MP_TEXT_CHAT_DISABLE=function(toggle--[[@param toggle boolean]])return InvokeVoid(0x1DB21A44B09E8BA3,toggle)end;
 }
