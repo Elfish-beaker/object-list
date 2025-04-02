@@ -3366,7 +3366,7 @@ however it uses -1 for the specified bone index, so it should be possible to sta
 	--[=[Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json]=]
 	START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITY=function(effectName--[[@param effectName string]],entity--[[@param entity integer]],offsetX--[[@param offsetX number]],offsetY--[[@param offsetY number]],offsetZ--[[@param offsetZ number]],rotX--[[@param rotX number]],rotY--[[@param rotY number]],rotZ--[[@param rotZ number]],scale--[[@param scale number]],axisX--[[@param axisX boolean]],axisY--[[@param axisY boolean]],axisZ--[[@param axisZ boolean]])return InvokeBool(0xC95EB1DB6E92113D,effectName,entity,offsetX+.0,offsetY+.0,offsetZ+.0,rotX+.0,rotY+.0,rotZ+.0,scale+.0,axisX,axisY,axisZ)end;---@return boolean
 	--[=[Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json]=]
-	START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITYSTART_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITYSTART_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITY=function(effectName--[[@param effectName string]],entity--[[@param entity integer]],offsetX--[[@param offsetX number]],offsetY--[[@param offsetY number]],offsetZ--[[@param offsetZ number]],rotX--[[@param rotX number]],rotY--[[@param rotY number]],rotZ--[[@param rotZ number]],boneIndex--[[@param boneIndex integer]],scale--[[@param scale number]],axisX--[[@param axisX boolean]],axisY--[[@param axisY boolean]],axisZ--[[@param axisZ boolean]])return InvokeBool(0x02B1F2A72E0F5325,effectName,entity,offsetX+.0,offsetY+.0,offsetZ+.0,rotX+.0,rotY+.0,rotZ+.0,boneIndex,scale+.0,axisX,axisY,axisZ)end;---@return boolean
+	START_PARTICLE_FX_NON_LOOPED_ON_ENTITY_BONE=function(effectName--[[@param effectName string]],entity--[[@param entity integer]],offsetX--[[@param offsetX number]],offsetY--[[@param offsetY number]],offsetZ--[[@param offsetZ number]],rotX--[[@param rotX number]],rotY--[[@param rotY number]],rotZ--[[@param rotZ number]],boneIndex--[[@param boneIndex integer]],scale--[[@param scale number]],axisX--[[@param axisX boolean]],axisY--[[@param axisY boolean]],axisZ--[[@param axisZ boolean]])return InvokeBool(0x02B1F2A72E0F5325,effectName,entity,offsetX+.0,offsetY+.0,offsetZ+.0,rotX+.0,rotY+.0,rotZ+.0,boneIndex,scale+.0,axisX,axisY,axisZ)end;---@return boolean
 	--[=[only works on some fx's, not networked]=]
 	SET_PARTICLE_FX_NON_LOOPED_COLOUR=function(r--[[@param r number]],g--[[@param g number]],b--[[@param b number]])return InvokeVoid(0x26143A59EF48B262,r+.0,g+.0,b+.0)end;
 	--[=[Usage example for C#:
@@ -3866,7 +3866,7 @@ See ANIMPOSTFX_PLAY
 Full list of animpostFX / screen effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animPostFxNamesCompact.json]=]
 	ANIMPOSTFX_STOP_AND_FLUSH_REQUESTS=function(effectName--[[@param effectName string]])return InvokeVoid(0xD2209BE128B5418C,effectName)end;
 }
-_G.NIG={
+_G.HUD={
 	--[=[Initializes the text entry for the the text next to a loading prompt. All natives for building UI texts can be used here
 
 
@@ -8610,7 +8610,7 @@ C# Example (ins1de) : https://pastebin.com/fxtMWAHD]=]
 
 p10 always equals 3.0
 p11 always equals 0]=]
-	REQUSET_NAMED_PTF_ASSET_FAVOUR_DIRECTION=function(x--[[@param x number]],y--[[@param y number]],z--[[@param z number]],desiredX--[[@param desiredX number]],desiredY--[[@param desiredY number]],desiredZ--[[@param desiredZ number]],nthClosest--[[@param nthClosest integer]],outPosition--[[@param outPosition V3*]],outHeading--[[@param outHeading number*]],nodeFlags--[[@param nodeFlags integer]],p10--[[@param p10 number]],p11--[[@param p11 number]])return InvokeBool(0x45905BE8654AE067,x+.0,y+.0,z+.0,desiredX+.0,desiredY+.0,desiredZ+.0,nthClosest,outPosition,outHeading,nodeFlags,p10+.0,p11+.0)end;---@return boolean
+	GET_NTH_CLOSEST_VEHICLE_NODE_FAVOUR_DIRECTION=function(x--[[@param x number]],y--[[@param y number]],z--[[@param z number]],desiredX--[[@param desiredX number]],desiredY--[[@param desiredY number]],desiredZ--[[@param desiredZ number]],nthClosest--[[@param nthClosest integer]],outPosition--[[@param outPosition V3*]],outHeading--[[@param outHeading number*]],nodeFlags--[[@param nodeFlags integer]],p10--[[@param p10 number]],p11--[[@param p11 number]])return InvokeBool(0x45905BE8654AE067,x+.0,y+.0,z+.0,desiredX+.0,desiredY+.0,desiredZ+.0,nthClosest,outPosition,outHeading,nodeFlags,p10+.0,p11+.0)end;---@return boolean
 	--[=[Gets the density and flags of the closest node to the specified position.
 Density is a value between 0 and 15, indicating how busy the road is.
 Flags is a bit field.]=]
@@ -17133,6 +17133,8 @@ Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Positio
 }
 
 
+NIGGER =  {
+	
 SET_TEXT_SCALE=function(scale--[[@param scale number]],size--[[@param size number]])return InvokeVoid(0x07C837F9A01C34C9,scale+.0,size+.0)end;
 SET_TEXT_COLOUR=function(red--[[@param red integer]],green--[[@param green integer]],blue--[[@param blue integer]],alpha--[[@param alpha integer]])return InvokeVoid(0xBE6B23FFA53FB442,red,green,blue,alpha)end;
 SET_TEXT_CENTRE=function(align--[[@param align boolean]])return InvokeVoid(0xC02F4DBFB51D988B,align)end;
@@ -17146,3 +17148,5 @@ BEGIN_TEXT_COMMAND_DISPLAY_TEXT=function(text--[[@param text string]])return Inv
 ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME=function(text--[[@param text string]])return InvokeVoid(0x6C188BE134E074AA,text)end;
 END_TEXT_COMMAND_DISPLAY_TEXT=function(x--[[@param x number]],y--[[@param y number]],p2--[[@param p2 integer]])return InvokeVoid(0xCD015E5BB0D96A57,x+.0,y+.0,p2)end;
 MP_TEXT_CHAT_DISABLE=function(toggle--[[@param toggle boolean]])return InvokeVoid(0x1DB21A44B09E8BA3,toggle)end;
+
+}
