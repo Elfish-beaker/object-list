@@ -1,4 +1,4 @@
-notification.show("Thanks for using Heist Tool V2.2") -- welcome message
+notification.show("Thanks for using Heist Tool V2.3") -- welcome message
 ------------------Start Content Section--------------------
 
 ------------------Cayo Section--------------------
@@ -1232,7 +1232,7 @@ end
 menu.on_draw(function()
     if ImGui.BeginTabBar("MainBar1") then -- FIRST MAIN BAR
         if ImGui.BeginTabItem("Intro/Warnings") then -- Intro Tab Item
-            ImGui.Text("Thank you for using Heist Tool V2.2")
+            ImGui.Text("Thank you for using Heist Tool V2.3")
             ImGui.Text("Owner: @prizely")
             ImGui.Separator()
             ImGui.Text("======== !!! READ ME !!! ========")
@@ -2075,7 +2075,8 @@ menu.on_draw(function()
                     classic_cut4, _ = ImGui.SliderInt("Player 4 Cut", classic_cut4, 0, 1490)
 
                     if ImGui.Button("ApplyPayout##4") then
-                        classic_apply_cuts() -- do we need to return the cuts here? unsure,
+                        notification.show("Applied Cuts")
+                        classic_apply_cuts(classic_cut1, classic_cut2, classic_cut3, classic_cut4) -- do we need to return the cuts here? unsure,
                     end
 
                     ImGui.Separator()
@@ -2088,7 +2089,7 @@ menu.on_draw(function()
                         classic_cut4 = 1490
 
                         notification.show("Applied Max Cuts")
-                        classic_apply_cuts()  -- call the apply function
+                        classic_apply_cuts(classic_cut1, classic_cut2, classic_cut3, classic_cut4)  -- call the apply function
                     end
 
                     if ImGui.Button("Max payout Prison Break(<= 429%)") then
@@ -2098,7 +2099,7 @@ menu.on_draw(function()
                         classic_cut4 = 429
 
                         notification.show("Applied Max Cuts")
-                        classic_apply_cuts()  -- call the apply function
+                        classic_apply_cuts(classic_cut1, classic_cut2, classic_cut3, classic_cut4)  -- call the apply function
                     end
 
                     if ImGui.Button("Max payout Humane Labs (<= 317%)") then
@@ -2108,7 +2109,7 @@ menu.on_draw(function()
                         classic_cut4 = 317
 
                         notification.show("Applied Max Cuts")
-                        classic_apply_cuts()  -- call the apply function
+                        classic_apply_cuts(classic_cut1, classic_cut2, classic_cut3, classic_cut4)  -- call the apply function
                     end
 
                     if ImGui.Button("Max payout A-Series (trevor) (<= 200)") then
@@ -2118,7 +2119,7 @@ menu.on_draw(function()
                         classic_cut4 = 200
 
                         notification.show("Applied Max Cuts")
-                        classic_apply_cuts()  -- call the apply function
+                        classic_apply_cuts(classic_cut1, classic_cut2, classic_cut3, classic_cut4)  -- call the apply function
                     end
 
                     ImGui.Separator()
