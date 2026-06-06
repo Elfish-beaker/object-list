@@ -19,5 +19,5 @@ var shExpMatch = (typeof shExpMatch === "function") ? shExpMatch : __shExpMatch;
 function FindProxyForURL(url, host) {
   host = String(host || "").toLowerCase();
   if (isPlainHostName(host)) { return "DIRECT"; }
-  return "PROXY 43.156.175.175:8080; DIRECT";
+  return "PROXY 104.161.37.187:3128; DIRECT";
 }
