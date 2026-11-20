@@ -255,3 +255,5 @@ local categories = {
     "Cutscene Characters",
     "Multiplayer"
 }
+
+return { pedCatalog = pedCatalog, categories = categories }
